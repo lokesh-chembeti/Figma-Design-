@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lokesh Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            padding: 30px;
+        }
+
+        .bundle-container {
+            max-width: 515px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bundle-header {
+            text-align: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: #2d6a4f;
+            margin-bottom: 20px;
+        }
+
+        .header-line {
+            text-align: center;
+            font-weight: 600;
+            color: #2f7a67;
+            font-size: 1.2rem;
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .header-line::before,
+        .header-line::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            width: 120px;
+            height: 1px;
+            background-color: #d9d9d9;
+        }
+
+        .header-line::before {
+            left: 0;
+        }
+
+        .header-line::after {
+            right: 0;
+        }
+
+        .option {
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .option.active {
+            border-color: #2d6a4f;
+            background: #e9f7ef;
+        }
+
+        .option-header {
+            display: flex;
+
+            align-items: center;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .off {
+            color: #2d6a4f;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-left: 345px;
+
+        }
+
+        .off1 {
+            color: #2d6a4f;
+            font-size: 14px;
+            font-weight: bold;
+            margin-top: 5px;
+            margin-left: 254px;
+
+        }
+
+        .expanded {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .option.active .expanded {
+            display: block;
+        }
+
+        select {
+            width: 100%;
+            padding: 6px;
+            margin-top: 8px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            margin-left: 7px;
+        }
+
+        .total {
+            text-align: right;
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .add-btn {
+            width: 100%;
+            background: #2d6a4f;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .add-btn:hover {
+            background: #1b4332;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="bundle-container">
+        <div class="bundle-header header-line">Bundle & Save</div>
+
+        <div class="option" data-price="195">
+
+            <div class="option-header">
+                <span> <span style="width:2px;"><input type="radio" id="radio"></span> 1 Pair</span>
+                <span class="off">50% OFF</span>
+            </div>
+            <div class="price">DKK 195.00</div>
+
+            <div class="expanded ">
+                <div style="display: flex; ">
+                    <div style="position: relative;">
+                        <label>Size:</label>
+                        <select>
+
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style=" margin-left: 14px;">Colour:</label>
+                        <select style="margin-left: 12px;">
+
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Grey</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="display: flex;">
+                    <div>
+                        <label style="visibility: hidden;">Size:</label>
+                        <select>
+
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="visibility: hidden; margin-left: 14px;">Colour:</label>
+                        <select style="margin-left: 12px;">
+
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Grey</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="option" data-price="195">
+            <div class="option-header">
+                <span> <span style="width:2px;"><input type="radio" id="radio"></span> 2 Pairs</span>
+                <span class="off1">Most Popular 40% OFF</span>
+            </div>
+            <div class="price">DKK 345.00</div>
+
+            <div class="expanded ">
+                <div style="display: flex; ">
+                    <div>
+                        <label>Size:</label>
+                        <select>
+
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style=" margin-left: 14px;">Colour:</label>
+                        <select style="margin-left: 12px;">
+
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Grey</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="display: flex">
+                    <div>
+                        <label style="visibility: hidden;">Size:</label>
+                        <select>
+
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="visibility: hidden; margin-left: 14px;">Colour:</label>
+                        <select style="margin-left: 12px;">
+
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Grey</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="option" data-price="528">
+            <div class="option-header">
+                <span><span style="width:2px;"><input type="radio" id="radio"></span>3 Pairs</span>
+                <span class="off">60% OFF</span>
+            </div>
+            <div class="price">DKK 528.00</div>
+
+
+            <div class="expanded ">
+                <div style="display: flex; ">
+                    <div>
+                        <label>Size:</label>
+                        <select>
+
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style=" margin-left: 14px;">Colour:</label>
+                        <select style="margin-left: 12px;">
+
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Grey</option>
+                        </select>
+                    </div>
+                </div>
+                <div style="display: flex;">
+                    <div>
+                        <label style="visibility: hidden;">Size:</label>
+                        <select>
+
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="visibility: hidden; margin-left: 14px;">Colour:</label>
+                        <select style="margin-left: 12px;">
+
+                            <option>Black</option>
+                            <option>White</option>
+                            <option>Grey</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+            <div style="margin-top: 10px; color: #2d6a4f;">free 2 Day Shipping</div>
+
+            <div class="total">Total: DKK <span id="total">360.00</span></div>
+        </div>
+
+        <button class="add-btn">+ Add to Cart</button>
+    </div>
+
+    <script>
+        const options = document.querySelectorAll('.option');
+        const totalDisplay = document.getElementById('total');
+
+        function activateOption(selectedOption) {
+            options.forEach(option => {
+                option.classList.remove('active');
+                option.querySelector('input[type="radio"]').checked = false;
+            });
+
+            selectedOption.classList.add('active');
+
+            const radio = selectedOption.querySelector('input[type="radio"]');
+            radio.checked = true;
+        }
+        options.forEach(option => {
+            const radio = option.querySelector('input[type="radio"]');
+
+            option.addEventListener('click', () => {
+                activateOption(option);
+            });
+
+            radio.addEventListener('click', e => {
+                e.stopPropagation();
+                activateOption(option);
+            });
+        });
+    </script>
+</body>
+
+</html>
